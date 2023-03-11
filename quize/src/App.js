@@ -6,7 +6,10 @@ import Score from './pages/FinalScreen';
 import Container from '@mui/material/Container';
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
+
+
 function App() {
+  
   return (
     
       <Container maxWidth='sm'>
@@ -15,9 +18,7 @@ function App() {
           <Route path="/" 
           element={
             <>
-              <Typography variant='h2' fontWeight='bold'>
-                Quiz App
-              </Typography>
+              <Typography variant='h2' fontWeight='bold'>Quiz App</Typography>
               <Settings />
             </>
           } />

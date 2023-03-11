@@ -1,21 +1,41 @@
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useState } from 'react'
-
+import { handleCategoryChange, handleDifficultyChange, handleTypeChange } from '../redux/actions'
+import { useDispatch } from 'react-redux'
 const SelectField = (props) => {
-    const {label}=props
+    const {label,options}=props
     const [value,setValue]=useState('')
+    const dispatch=useDispatch()
     const handleChange=(e)=>{
         console.log(e.target.value)
+        setValue(e.target.value)
+        switch(label){
+            case 'Category':
+                dispatch(handleCategoryChange(e.target.value))
+                break
+            case 'Difficulty':
+                dispatch(handleDifficultyChange(e.target.value))
+                break
+            case 'Type':
+                dispatch(handleTypeChange(e.target.value))
+                break
+            default:
+                return 
+        }
     }
   return (
     <Box mt={3} width='100%'>
         <FormControl size="small" fullWidth>
             <InputLabel>{label}</InputLabel>
             <Select value={value} label={label} onChange={handleChange}>
-                <MenuItem>Option1</MenuItem>
-                <MenuItem>Option2</MenuItem>
-                <MenuItem>Option3</MenuItem>
+                {
+                    options.map((opt)=>(
+                        <MenuItem key={opt.id} value={opt.id}>
+                            {opt.name}
+                        </MenuItem>
+                    ))
+                }
             </Select>
         </FormControl>
     </Box>
