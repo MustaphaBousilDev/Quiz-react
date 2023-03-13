@@ -1,15 +1,12 @@
 import {
      CHANGE_AMOUNT,
-     CHANGE_CATEGORY,
+     
      CHANGE_DIFFICULTY,
      CHANGE_SCORE,
      CHANGE_TYPE,
 } from './actionsTypes'
 
-export const handleCategoryChange=(payload)=>({
-     type:CHANGE_CATEGORY,
-     payload
-})
+
 
 export const handleDifficultyChange=(payload)=>({
      type:CHANGE_DIFFICULTY,

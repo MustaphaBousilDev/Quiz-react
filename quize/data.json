@@ -1,0 +1,169 @@
+{
+     "data":[
+          {
+               "type":"multiple",
+               "difficulty": "easy",
+               "id": 1,
+              "question": "question  1 easy ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "Amazon EC2 costs are billed on a monthly basis",
+                      "isCorrect": false
+                  },
+                  {
+                      "id":2, 
+                      "choix": "Users retain full administrative access to their Amazon EC2 instances",
+                      "isCorrect": false
+                  },
+                  {
+                      "id":3,
+                      "choix": "Amazon EC2 instances can be launched on demand when needed",
+                      "isCorrect": true
+                  },
+                  {
+                      "id": 4,
+                      "choix": "Users can permanently run enough instances to handle peak workloads",
+                      "isCorrect": false
+                  }
+              ],
+              "correct_answer":3, 
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"boolean",
+               "difficulty": "medium",
+               "id": 2,
+              "question": "question 2 medium ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "True",
+                      "isCorrect": false
+                  },
+                  {
+                      "id": 2,
+                      "choix": "False",
+                      "isCorrect": true
+                  }
+                  
+              ],
+              "correct_answer":2,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"boolean",
+               "difficulty": "medium",
+               "id": 3,
+              "question": "question three medium ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "True",
+                      "isCorrect": false
+                  },
+                  {
+                      "id": 2,
+                      "choix": "False",
+                      "isCorrect": true
+                  }
+                  
+              ],
+              "correct_answer":2,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"multiple",
+               "difficulty": "easy",
+               "id": 4,
+              "question": "question 4 hard ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "Amazon EC2 costs are billed on a monthly basis",
+                      "isCorrect": false
+                  },
+                  {
+                      "id":2, 
+                      "choix": "Users retain full administrative access to their Amazon EC2 instances",
+                      "isCorrect": false
+                  },
+                  {
+                      "id":3,
+                      "choix": "Amazon EC2 instances can be launched on demand when needed",
+                      "isCorrect": true
+                  },
+                  {
+                      "id": 4,
+                      "choix": "Users can permanently run enough instances to handle peak workloads",
+                      "isCorrect": false
+                  }
+              ],
+              "correct_answer":2,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"boolean",
+               "difficulty": "medium",
+               "id": 5,
+              "question": "question  medium 5 ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "True",
+                      "isCorrect": false
+                  },
+                  {
+                      "id": 2,
+                      "choix": "False",
+                      "isCorrect": true
+                  }
+                  
+              ],
+              "correct_answer":1,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"boolean",
+               "difficulty": "medium",
+               "id": 6,
+              "question": "question 6 medium ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "True",
+                      "isCorrect": false
+                  },
+                  {
+                      "id": 2,
+                      "choix": "False",
+                      "isCorrect": true
+                  }
+                  
+              ],
+              "correct_answer":1,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          },
+          {
+               "type":"boolean",
+               "difficulty": "medium",
+               "id": 7,
+              "question": "question 7 medium ?",
+              "answer": [
+                  {
+                      "id": 1,
+                      "choix": "True",
+                      "isCorrect": false
+                  },
+                  {
+                      "id": 2,
+                      "choix": "False",
+                      "isCorrect": true
+                  }
+                  
+              ],
+              "correct_answer":2,
+              "explication": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload"
+          }
+     ]
+}

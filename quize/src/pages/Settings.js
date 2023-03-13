@@ -8,7 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import useAxios from "../hooks/useAxios"
 
 const Settings = () => {
-  const { response, error, loading } = useAxios({ url: "/api_category.php" });
+  const { response, error, loading } = useAxios({ url: "http://localhost:3000/data" });
+  //console.log('fuck')
+  //console.log(response)
   const navigate=useNavigate()
   const [value,setValue]=useState(0)
 
@@ -52,7 +54,6 @@ const Settings = () => {
     <>
     <HorizontalLabelPositionBelowStepper activeStep={value} steps={['','','']} />
     <form onSubmit={handleSubmit}>
-      <SelectField options={response.trivia_categories} label='Category' />
       <SelectField options={difficultyOptions} label='Difficulty' />
       <SelectField options={typeOptions} label='Type' />
       <TextFieldComp />
