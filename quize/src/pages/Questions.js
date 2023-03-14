@@ -8,9 +8,9 @@ import { useNavigate } from "react-router-dom"
 import LinearProgressWithLabel from "../components/progressBar"
 import { useDispatch } from "react-redux"
 import { decode } from "html-entities"
-import { handleScoreChange } from "../redux/actions"
-
-const getRandom=(max)=>{return Math.floor(Math.random()*Math.floor(max))}
+import { handleScoreChange, handleRandomQuestion,handleChoiceAnswer} from "../redux/actions"
+let  choise=[]
+//const getRandom=(max)=>{return Math.floor(Math.random()*Math.floor(max))}
 const Questions = () => {
   const [value,setValue]=useState(1)
   const {question_difficulty,question_type,amount_questions,score}=useSelector(state=>state)
@@ -50,13 +50,11 @@ const Questions = () => {
             rn.push(response[n])
             setRandomData(rn)
         }
+        //set random question
         
-        
-      /*for(let i=0;i<response.length;i++){
-        const randomIndex = Math.floor(Math.random() * response.length);
-        rn.push(response[randomIndex])
-        setRandomData(rn)
-      }*/
+        console.log('its me')
+        console.log(aliasSerie)
+        dispatch(handleRandomQuestion(rn))
       const question=rn[questionIndex]?.question
       const options=[...rn[questionIndex]?.answer]
       setOptions(options)
@@ -67,20 +65,28 @@ const Questions = () => {
 
   if(randomData.length===0){return (<Box mt={20}><CircularProgress/></Box>)}
   if(loading){return (<Box mt={20}><CircularProgress/></Box>)}
+
+  
   const handleAnswer=(e)=>{
     setProgress((prevProgress) => (prevProgress >= 100 ? ps : prevProgress + ps));
     const question=randomData[questionIndex]
+    //set choice answer every time he is click button and send all his choice to redux
+    choise.push(e.target.id)
+    console.log('question')
+
+    console.log('choice')
+    console.log(choise)
     if(parseInt(e.target.id)===question.correct_answer){
-  dispatch(handleScoreChange(score + 1))
-   }
+      dispatch(handleScoreChange(score + 1)) 
+    }
     if(questionIndex +1 < response.length){
       setQuestionIndex(questionIndex + 1)
     }else{
+
+      dispatch(handleChoiceAnswer(choise))
       navigate('/score')
     }
   }
-
-  console.log('fuck me')
   console.log(randomData)
   return (
     <>

@@ -2,7 +2,7 @@
 import {Routes,Route} from 'react-router-dom';
 import Settings from './pages/Settings';
 import Questions from './pages/Questions';
-import Score from './pages/FinalScreen';
+import Score from './pages/Score';
 import Container from '@mui/material/Container';
 import { Box } from '@mui/system';
 import { Typography } from '@mui/material';
@@ -12,8 +12,8 @@ function App() {
   
   return (
     
-      <Container maxWidth='sm'>
-        <Box textAlign='center' mt={5}>
+      <Container maxWidth='md'>
+        <Box textAlign='left' mt={5}>
         <Routes>
           <Route path="/" 
           element={

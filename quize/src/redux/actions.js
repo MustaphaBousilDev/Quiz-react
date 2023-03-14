@@ -4,6 +4,8 @@ import {
      CHANGE_DIFFICULTY,
      CHANGE_SCORE,
      CHANGE_TYPE,
+     RANDOM_QUESTION,
+     CHOICE_ANSWER
 } from './actionsTypes'
 
 
@@ -25,5 +27,15 @@ export const handleAmountChange=(payload)=>({
 
 export const handleScoreChange=(payload)=>({
      type:CHANGE_SCORE,
+     payload
+})
+
+export const handleRandomQuestion=(payload)=>({
+     type:RANDOM_QUESTION,
+     payload
+})
+
+export const handleChoiceAnswer=(payload)=>({
+     type:CHOICE_ANSWER,
      payload
 })
