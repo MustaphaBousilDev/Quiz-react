@@ -1,10 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './score.scss'
 import { handleAmountChange, handleScoreChange ,handleChoiceAnswer } from '../redux/actions'
+import HorizontalLabelPositionBelowStepper from '../components/steperComponent'
 const Score = () => {
+const [value,setValue]=useState(2)
 const {score}=useSelector(state=>state)
 //get question_random from redux
 const {question_random}=useSelector(state=>state)
@@ -23,6 +25,7 @@ const navigate=useNavigate()
   return (
     <>
     <Box mt={30}>
+    <HorizontalLabelPositionBelowStepper activeStep={value} steps={['','','']} />
       <Typography textAlign={'center'} variant='h3'  fontWeight='bold' mb={3}>
         Final Score {score} of {question_random.length}
       </Typography>
